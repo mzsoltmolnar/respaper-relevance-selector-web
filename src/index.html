@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/src/css/superhero/bootstrap.min.css" />
+    <link rel="stylesheet" href="/src/css/styles.css" />
+  </head>
+
+  <body>
+    <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <input
+          id="search_query"
+          class="form-control me-sm-3"
+          type="text"
+          placeholder="Search"
+        />
+        <select class="form-select me-sm-3" id="limit_input"></select>
+        <button
+          class="btn btn-secondary my-2 my-sm-0 me-sm-3"
+          type="submit"
+          onclick="onSearchButtonClick()"
+        >
+          Search
+        </button>
+        <h2>
+          <span id="paperCounter" class="badge rounded-pill bg-success me-sm-3"
+            >-</span
+          >
+        </h2>
+        <button
+          type="button"
+          class="btn btn-danger"
+          onclick="onSaveButtonClick()"
+        >
+          Save
+        </button>
+      </div>
+    </nav>
+    <div id="search_res_container"></div>
+    <script src="/src/script/script.js" async defer></script>
+    <script>
+      document
+        .getElementById("search_query")
+        .addEventListener("keyup", onEnterPressed);
+      for (let i = 1; i <= 50; i++) {
+        document.getElementById("limit_input").innerHTML += `<option ${
+          i === 25 ? "selected" : ""
+        }>${i}</option>`;
+      }
+    </script>
+  </body>
+</html>
