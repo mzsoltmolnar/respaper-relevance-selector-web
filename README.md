@@ -2,7 +2,7 @@
 
 Enter a search term and decide which of the returned results is relevant for your research. After finishing the accept/reject process, with the `Save` button the not rejected search results are saved in BibTeX format file that can be imported in Zotero.
 
-
+[Online version](https://mzsoltmolnar.github.io/respaper-relevance-selector-web/) is free to use
 
 The saved file includes the following fields:
 - author
